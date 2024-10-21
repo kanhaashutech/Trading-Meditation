@@ -228,6 +228,7 @@ nav > img {
   justify-content: center;
   gap: 2rem;
   align-items: center;
+  flex-wrap: wrap;
   /* background-color: #0067b1; */
   margin-top: 2rem;
 }
@@ -290,10 +291,33 @@ nav > img {
   font-weight: 800;
   letter-spacing: .2px;
   border-radius: 3rem 0 3rem 0;
-
+display: inline-block;
   filter: drop-shadow(1px 1px 0 #000);
   color: #ffffff;
+  animation: button .6s ease-in-out infinite alternate ;
+  
 }
+
+@keyframes button{
+0%{
+   opacity: 70%;
+   rotate: 3deg;
+  }
+
+  50%{
+    opacity: 1;
+    color: #fff;
+    /* rotate: 0deg; */
+  }
+  100%{
+    opacity: 90%;
+    color: #fff;
+    rotate: -3deg;
+  }
+
+  
+}
+
 
 .trainer_cont .img-div {
   height: 32rem;
@@ -501,32 +525,7 @@ h4.testi-sub-head {
   visibility: visible;
 }
 
-/* ============= Responsive Ipad ==================== */
 
-@media (max-width: 992px) {
-  .creative-cards .container .row .card-column {
-    flex: 0 0 auto;
-    width: 50%;
-    margin-bottom: 40px;
-  }
-}
-
-/* ============= Responsive Iphone ==================== */
-@media (max-width: 480px) {
-  .creative-cards .container .row .card-column {
-    flex: 0 0 auto;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-  .card-details {
-    width: 100%;
-  }
-  .read-more-btn {
-    transform: translateX(0px);
-    opacity: 1;
-    visibility: visible;
-  }
-}
 
 /* testimonial ends */
 
@@ -561,7 +560,9 @@ h2.slot{
 
 .cta .cta-btn{
   padding: 2rem 0 .3rem 0;
+ 
 }
+
 a.cta-price {
   color: #fff;
   background: linear-gradient(90deg , #0028c8, #001879 );
@@ -572,8 +573,40 @@ a.cta-price {
   border: 2px solid #fff;
   margin-top: 1.5rem;
   font-weight: 500;
+  display: inline-block;
+  animation: cta .7s ease-in-out infinite alternate ;
 }
 
+@keyframes cta {
+  /* 0%{
+    transform: rotate(15deg);
+    opacity: 0;
+  }
+
+  100%{
+    transform: rotate(15deg);
+    opacity: 1;
+  } */
+  
+
+    0%{
+       opacity: 70%;
+       rotate: 1deg;
+      }
+    
+      50%{
+        opacity: 1;
+        color: #fff;
+        /* rotate: 0deg; */
+      }
+
+      100%{
+        opacity: 90%;
+        color: #fff;
+        rotate: -1deg;
+      }
+    
+}
 
 .cta-btn .cta-price .price_cut{
   text-decoration: line-through;
@@ -648,9 +681,859 @@ p.footer{
 }
 
 
+/* 
 
 
 
+
+
+*/
+
+/* ============= TABLET Responsive Code Starts ==================== */
+
+@media (max-width: 950px){
+
+
+  nav {
+    height: 5rem;
+  }
+  
+  nav > img {
+    height: 95%;
+  }
+  
+  .heading {
+    padding-top: 1.3rem;
+    width: 90%;
+  }
+  
+  .heading h1 {
+    font-size: 2rem;
+    filter: drop-shadow(1px 1px 0.5px #77ffa5);
+  }
+  
+  .heading h2 {
+    font-size: 1.6rem;
+  }
+  
+  .video-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 1.2rem;
+    gap: .6rem;
+    width: 100%;
+  }
+  
+  .video-section strong {
+    font-weight: 600;
+    color: #5306ab;
+    font-style: italic;
+    font-size: 1rem;
+    font-family: var(--ff-inter);
+  }
+  
+  .video-section iframe {
+    width: 90%;
+    height: 28rem;
+    border-radius: .8rem;
+    box-shadow: 6px 10px 15px #dfdfdfa9;
+  }
+  
+
+
+/* ------------  Meet Trainer section --------- */
+
+.meet-trainer {
+  margin: 2rem 0;
+}
+
+.meet-trainer h1 {
+  font-weight: 700;
+}
+
+.trainer_cont {
+  gap: 2rem;
+  margin-top: 1.2rem;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+
+.trainer_cont  .txt-div {
+  width: 80%;
+  height: 100%;
+}
+
+.trainer_cont  .txt-div h2 {
+  font-weight: 800;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+}
+
+.trainer_cont  .txt-div ul {
+  font-size: 1.3rem;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+.trainer_cont  .txt-div .change_life {
+  margin-top: 2.3rem;
+}
+
+.trainer_cont  .txt-div h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.trainer_cont  .txt-div h3 b {
+  color: #1f93ff;
+}
+
+.trainer_cont  .txt-div h3.enroll {
+  margin-top: 2.3rem;
+  font-size: 1.3rem;
+}
+
+.trainer_cont  .txt-div a#enroll-btn {
+  padding: .7rem 1.4rem;
+  font-weight: 800;
+  font-size: 1.3rem;
+  border-radius: 2.5rem 0 2.5rem 0;
+  
+}
+
+@keyframes button{
+0%{
+   opacity: 70%;
+   rotate: 3deg;
+  }
+
+  50%{
+    opacity: 1;
+    color: #fff;
+    /* rotate: 0deg; */
+  }
+  100%{
+    opacity: 90%;
+    color: #fff;
+    rotate: -3deg;
+  }
+
+  
+}
+
+
+.trainer_cont .img-div {
+  height: 28rem;
+  width: 80%;
+  /* background-color: #007a00; */
+}
+
+.trainer_cont .img-div img {
+  border-top-left-radius: 4rem;
+  border-bottom-right-radius: 4rem;
+  filter: drop-shadow(7px 8px 0 #8fff9e);
+}
+
+/* ---------- other details ----------------- */
+
+.main .details {
+  margin-top: 1rem;
+  padding: 1rem 0 0 0;
+}
+
+.details .box h1 {
+  font-weight: 700;
+  font-size: 1.8rem;
+  margin-top: 1rem;
+}
+
+.main .details .box h3.sub-head {
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 70%;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.details p.details-para {
+  font-size: 1.2rem;
+  margin-top: .8rem;
+  width: 70%;
+}
+
+/*-------------------- testimonial section starts ----------------------------- */
+
+h1.testi {
+  font-size: 1.8rem;
+  margin-top: 2rem;
+}
+
+h4.testi-sub-head {
+  font-size: 1.3rem;
+}
+
+.creative-cards {
+  padding: 50px 0;
+  position: relative;
+}
+
+.creative-cards .container {
+  max-width: 1320px;
+  width: 100%;
+  padding-right: .5rem;
+  padding-left: .5rem;
+}
+
+.creative-cards .container .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.creative-cards .container .row .card-column {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+  text-align: center;
+  max-width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.card-details {
+  width: 80%;
+  margin: auto;
+  position: relative;
+  transition: .3s ease-in-out;
+}
+
+.card-details:before {
+  width: 150px;
+  height: 270px;
+}
+
+.card-details:hover:before {
+  background-color: #befabf;
+}
+
+.card-icons {
+  width: 100px;
+  height: 110px;
+}
+
+.card-icons:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid;
+  width: 100%;
+  height: 100%;
+  transform: skew(-20deg, 0deg);
+  background: #fff;
+  border-color: #02ff13;
+  transition: .3s ease-in-out;
+}
+
+.card-details:hover .card-icons:before {
+  background-color: #007a00;
+}
+
+.card-icons img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 0rem;
+  /* height: 70px; */
+}
+
+.card-details h3 {
+  margin-bottom: 15px;
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.card-details h3 a {
+  color: #000;
+  text-decoration: none;
+}
+
+.card-details p {
+  font-size: 16px;
+  line-height: 20px;
+  margin-bottom: 30px;
+}
+
+
+
+
+/* testimonial ends */
+
+/* ------------ CTA starts -------------- */
+
+.cta {
+  padding: 1.3rem 0;
+}
+
+.cta h1 {
+  font-size: 2rem;
+}
+
+.cta h1.join {
+  font-size: 1.8rem;
+  margin: 1rem 0;
+}
+
+h2.slot{
+  color: #f10000;
+  padding: .6rem 0;
+  font-size: 1.5rem;
+}
+
+.cta .cta-btn{
+  padding: 1rem 0 .3rem 0;
+ 
+}
+
+a.cta-price {
+  background: linear-gradient(90deg , #0028c8, #001879 );
+  font-size: 1.3rem;
+  padding: .6rem 3rem;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  margin-top: 0rem;
+  font-weight: 500;
+  display: inline-block;
+  animation: cta .7s ease-in-out infinite alternate ;
+}
+
+@keyframes cta {
+    0%{
+       opacity: 70%;
+       rotate: 1deg;
+      }
+    
+      50%{
+        opacity: 1;
+        color: #fff;
+        /* rotate: 0deg; */
+      }
+
+      100%{
+        opacity: 90%;
+        color: #fff;
+        rotate: -1deg;
+      }
+    
+}
+
+.cta-btn .cta-price .price_cut{
+  text-decoration: line-through;
+}
+
+.faq{
+  font-size: 1.3rem;
+  padding: 1.1rem 0;
+  gap: .2rem;
+}
+
+.faq h3#faq_head{
+  font-size: 2.1rem;
+  letter-spacing: 4px;
+
+}
+
+.faq p b{
+  font-size: 1.3rem;
+  margin: .3rem 0;
+}
+
+.faq p{
+  font-size: 1.1rem;
+
+}
+
+/* last sectioon */
+
+.last h3 {
+  color: #01a001;
+  width: 85%;
+  font-weight: 500;
+  line-height: 1.8rem;
+  font-size: 1.3rem;
+}
+
+.last .last-cta{
+  margin: .6rem 0;
+}
+
+/* policy_links */
+
+.policy_links{
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.policy_links a{
+  text-decoration: none;
+
+}
+
+/* footer */
+
+p.footer{
+  font-size: 1rem;
+  color: gray;
+  width: 80%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+
+
+} 
+
+
+@media (max-width: 992px) {
+  .creative-cards .container .row .card-column {
+    flex: 0 0 auto;
+    width: 50%;
+    margin-bottom: 40px;
+  }
+}
+
+/* ============= Responsive Iphone ==================== */
+
+@media (max-width: 480px) {
+  .creative-cards .container .row .card-column {
+    flex: 0 0 auto;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .card-details {
+    width: 100%;
+  }
+
+  .read-more-btn {
+    transform: translateX(0px);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+
+/* ******************* MOBILE RESPONSIVE CODE STARTS ********************** */
+
+
+@media (max-width: 500px){
+
+
+  nav {
+    height: 4rem;
+  }
+  
+  nav > img {
+    height: 99%;
+  }
+  
+  .heading {
+    padding-top: 2rem;
+    width: 95%;
+  }
+  
+  .heading h1 {
+    font-size: 1.5rem;
+    /* filter: none; */
+    filter: drop-shadow(1px 1px 0.5px #77ffa5);
+    font-weight: 600;
+  }
+  
+  .heading h2 {
+    font-size: 1.2rem;
+    margin-top: 1.3rem;
+    font-weight: 400;
+  }
+  
+  .video-section {
+    margin-top: 1rem;
+    gap: .6rem;
+    width: 100%;
+  }
+  
+  .video-section strong {
+    font-weight: 600;
+    font-size: .8rem;
+  }
+  
+  .video-section iframe {
+    width: 90%;
+    height: 13rem;
+    border-radius: .2rem;
+    box-shadow: 3px 6px 12px #dfdfdfa9;
+  }
+  
+
+
+/* ------------  Meet Trainer section --------- */
+
+.meet-trainer {
+  margin: 2rem 0;
+}
+
+.meet-trainer h1 {
+  font-weight: 700;
+  font-size: 1.6rem;
+}
+
+.trainer_cont {
+  gap: 2rem;
+  margin-top: 1.2rem;
+}
+
+
+.trainer_cont  .txt-div {
+  width: 98%;
+  height: 100%;
+}
+
+.trainer_cont  .txt-div h2 {
+  font-weight: 800;
+  font-size: 1.4rem;
+  letter-spacing: 2px;
+}
+
+.trainer_cont  .txt-div ul {
+  font-size: 1.1rem;
+  margin-top: .8rem;
+  font-weight: 500;
+}
+.trainer_cont  .txt-div .change_life {
+  margin-top: 2.3rem;
+}
+
+.trainer_cont  .txt-div h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.trainer_cont  .txt-div h3 b {
+  color: #1f93ff;
+}
+
+.trainer_cont  .txt-div h3.enroll {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.trainer_cont  .txt-div a#enroll-btn {
+  padding: .7rem 1.4rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 2.5rem 0 2.5rem 0;
+  
+}
+
+@keyframes button{
+0%{
+   opacity: 70%;
+   rotate: 2deg;
+  }
+
+  50%{
+    opacity: 1;
+    color: #fff;
+    /* rotate: 0deg; */
+  }
+  100%{
+    opacity: 90%;
+    color: #fff;
+    rotate: -2deg;
+  }
+
+  
+}
+
+
+.trainer_cont .img-div {
+  height: 20rem;
+  width: 90%;
+  /* background-color: #007a00; */
+}
+
+.trainer_cont .img-div img {
+  border-top-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  filter: drop-shadow(7px 8px 0 #8fff9e);
+}
+
+/* ---------- other details ----------------- */
+
+.main .details {
+  margin-top: 1rem;
+  padding: 1rem 0 0 0;
+}
+
+.details .box h1 {
+  font-weight: 700;
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+}
+
+.main .details .box h3.sub-head {
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 88%;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.details p.details-para {
+  font-size: 1.2rem;
+  margin-top: .8rem;
+  width: 88%;
+}
+
+/*-------------------- testimonial section starts ----------------------------- */
+
+h1.testi {
+  font-size: 1.6rem;
+  margin-top: 3rem;
+}
+
+h4.testi-sub-head {
+  font-size: 1.2rem;
+}
+
+.creative-cards {
+  padding: 50px 0;
+  position: relative;
+}
+
+.creative-cards .container {
+  max-width: 1320px;
+  width: 100%;
+  padding-right: .5rem;
+  padding-left: .5rem;
+}
+
+.creative-cards .container .row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.creative-cards .container .row .card-column {
+  flex: 0 0 auto;
+  width: 90%;
+  text-align: center;
+  max-width: 100%;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.card-details {
+  width: 80%;
+  margin: auto;
+  position: relative;
+  transition: .3s ease-in-out;
+}
+
+.card-details:before {
+  width: 130px;
+  height: 250px;
+}
+
+.card-details:hover:before {
+  background-color: #befabf;
+}
+
+.card-icons {
+  width: 100px;
+  height: 110px;
+}
+
+.card-icons:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid;
+  width: 100%;
+  height: 100%;
+  transform: skew(-20deg, 0deg);
+  background: #fff;
+  border-color: #02ff13;
+  transition: .3s ease-in-out;
+}
+
+.card-details:hover .card-icons:before {
+  background-color: #007a00;
+}
+
+.card-icons img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 0rem;
+  /* height: 70px; */
+}
+
+.card-details h3 {
+  margin-bottom: 15px;
+  margin-top: 10px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+.card-details h3 a {
+  color: #000;
+  text-decoration: none;
+}
+
+.card-details p {
+  font-size: 14px;
+  line-height: 18px;
+  margin-bottom: 30px;
+}
+
+
+
+
+/* testimonial ends */
+
+/* ------------ CTA starts -------------- */
+
+.cta {
+  padding: 1.2rem 0;
+}
+
+.cta h1 {
+  font-size: 1.35rem;
+}
+
+.cta h1.join {
+  font-size: 1.2rem;
+  margin: 1.5rem 0;
+}
+
+h2.slot{
+  color: #f10000;
+  padding: .6rem 0;
+  font-size: 1.2rem;
+}
+
+.cta .cta-btn{
+  padding: 1rem 0 .3rem 0;
+ 
+}
+
+a.cta-price {
+  background: linear-gradient(90deg , #0028c8, #001879 );
+  font-size: 1.1rem;
+  padding: .5rem 1.5rem;
+  border-radius: 5px;
+  border: 2px solid #fff;
+  margin-top: 0rem;
+  font-weight: 500;
+  display: inline-block;
+  animation: cta .7s ease-in-out infinite alternate ;
+}
+
+@keyframes cta {
+    0%{
+       opacity: 70%;
+       rotate: 1deg;
+      }
+    
+      50%{
+        opacity: 1;
+        color: #fff;
+        /* rotate: 0deg; */
+      }
+
+      100%{
+        opacity: 90%;
+        color: #fff;
+        rotate: -1deg;
+      }
+    
+}
+
+.cta-btn .cta-price .price_cut{
+  text-decoration: line-through;
+}
+
+.faq{
+  font-size: 1.3rem;
+  padding: 1.1rem 0;
+  gap: .2rem;
+  width: 95%;
+}
+
+.faq h3#faq_head{
+  font-size: 1.5rem;
+  letter-spacing: 4px;
+
+}
+
+.faq p b{
+  font-size: 1.1rem;
+  margin: .3rem 0;
+  
+}
+
+.faq p{
+  font-size: 1rem;
+}
+
+/* last sectioon */
+
+.last h3 {
+  color: #01a001;
+  width: 95%;
+  font-weight: 400;
+  line-height: 1.6rem;
+  font-size: 1.2rem;
+  letter-spacing: .2px;
+  font-style: italic;
+}
+
+.last .last-cta{
+  margin: .6rem 0;
+}
+
+/* policy_links */
+
+.policy_links{
+  margin-top: 2.3rem;
+  margin-bottom: 1rem;
+}
+
+.policy_links a{
+  text-decoration: none;
+  font-size: .9rem;
+
+}
+
+/* footer */
+
+p.footer{
+  font-size: .7rem;
+  color: gray;
+  width: 98%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+
+
+} 
 
 
 

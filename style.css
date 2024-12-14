@@ -228,7 +228,8 @@ nav > img {
   justify-content: center;
   gap: 2rem;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap-reverse;
+  flex
   /* background-color: #0067b1; */
   margin-top: 2rem;
 }
@@ -756,8 +757,8 @@ p.footer{
 .trainer_cont {
   gap: 2rem;
   margin-top: 1.2rem;
-  flex-wrap: wrap;
-  flex-direction: column;
+  flex-wrap: wrap-reverse;
+  flex-direction: column-reverse;
 }
 
 
@@ -1191,6 +1192,8 @@ p.footer{
 .trainer_cont {
   gap: 2rem;
   margin-top: 1.2rem;
+  
+  flex-wrap: wrap-reverse;
 }
 
 
